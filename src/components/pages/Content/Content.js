@@ -21,8 +21,9 @@ function Content() {
   );
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container direction="row" justifyContent="center" spacing={2}>
-        <Grid item xs={10} md={7} sx={{ height: "auto" }}>
+      <Grid container direction="row" justifyContent="center" spacing={1}>
+        <Grid item sx={2} md={2}></Grid>
+        <Grid item xs={10} md={8} sx={{ height: "auto" }}>
           <Card variant="outlined">{card}</Card>
           <card>
             <Places />
