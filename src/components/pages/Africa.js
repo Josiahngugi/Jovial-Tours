@@ -1,7 +1,8 @@
 import React from "react";
+import Content from "./Content/Content";
 
 function Africa() {
-  return <div> Africa </div>;
+  return <Content />;
 }
 
 export default Africa;
