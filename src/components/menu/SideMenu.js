@@ -15,10 +15,13 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { useParams, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
 function SideMenu(props) {
+  const navigate = useNavigate();
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -36,7 +39,7 @@ function SideMenu(props) {
       <List>
         {MenuItems.map((menu) => (
           <ListItem key={menu.id} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => navigate(menu.route)}>
               <ListItemIcon>{menu.icon}</ListItemIcon>
               <ListItemText primary={menu.label} />
             </ListItemButton>
