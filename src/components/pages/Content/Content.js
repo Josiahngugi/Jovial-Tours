@@ -12,10 +12,7 @@ import {
 function Content() {
   const card = (
     <>
-      <CardHeader
-        title="Africa Tour Places"
-        sx={{ textAlign: "center" }}
-      ></CardHeader>
+      <CardHeader title="Tour Places" sx={{ textAlign: "center" }}></CardHeader>
 
       <CardContent>
         <TextField variant="standard" fullWidth placeholder="search a place" />
@@ -25,8 +22,8 @@ function Content() {
   return (
     <Box sx={{ width: "100%" }}>
       <Grid container direction="row" justifyContent="center" spacing={2}>
-        <Grid item xs={10} md={7} sx={{ border: 1, height: "auto" }}>
-          <Card>{card} </Card>
+        <Grid item xs={10} md={7} sx={{ height: "auto" }}>
+          <Card variant="outlined">{card} </Card>
         </Grid>
       </Grid>
     </Box>
