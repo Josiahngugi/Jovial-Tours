@@ -124,9 +124,6 @@ function SideMenu(props) {
         }}
       >
         <Toolbar />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        </Typography>
       </Box>
     </Box>
   );
