@@ -24,9 +24,9 @@ const MenuItems = [
   },
   {
     id: 3,
-    label: "Asian",
+    label: "Asia",
     icon: <AppRegistrationIcon />,
-    route: "asian"
+    route: "asia"
   }
 ];
 
