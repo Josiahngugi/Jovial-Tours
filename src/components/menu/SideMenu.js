@@ -29,6 +29,9 @@ function SideMenu(props) {
   const drawer = (
     <div>
       <Toolbar />
+      <Typography variant="h6" sx={{ ml: 8, mb: 4 }}>
+        Jovial-Tour
+      </Typography>
       <Divider />
       <List>
         {MenuItems.map((menu) => (
