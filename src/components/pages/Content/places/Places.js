@@ -1,4 +1,5 @@
 import React from "react";
+import PlaceItems from "./placeItems";
 import {
   Grid,
   Typography,
@@ -11,44 +12,36 @@ import {
 } from "@mui/material";
 
 function Places() {
-  const card = (
-    <>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </>
-  );
   return (
-    <Box sx={{ width: "100%" }}>
-      <Grid container direction="row" justifyContent="center" spacing={2}>
-        <Grid item xs={10} md={6} sx={{ height: "auto" }}>
-          <Card variant="outlined">{card} </Card>
-        </Grid>
-        <Grid item xs={10} md={6} sx={{ height: "auto" }}>
-          <Card variant="outlined">{card} </Card>
-        </Grid>
-        <Grid item xs={10} md={6} sx={{ height: "auto" }}>
-          <Card variant="outlined">{card} </Card>
-        </Grid>
+    <Box sx={{ width: "100%", mt: 3 }}>
+      <Grid container direction="row" justifyContent="center" spacing={1}>
+        {PlaceItems.map((content) => (
+          <Grid item xs={12} md={6} sx={{ height: "auto" }}>
+            <Card variant="outlined">
+              <CardMedia
+                component="img"
+                height="i40"
+                image={content.imgSrc}
+                alt={content.alt}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {content.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {content.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Book</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
 }
 
-export default Plac;
+export default Places;
